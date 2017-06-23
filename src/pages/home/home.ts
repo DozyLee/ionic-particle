@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { ParticleProvider } from '../../providers/particle/particle';
-
+import { ListPage } from '../list/list';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -23,6 +23,11 @@ export class HomePage {
         this.subscription.cancel();
     }
     this.subscription = null;
+  }
+
+  GotoNext()
+  {
+     this.navCtrl.push(ListPage);
   }
 
   ionViewDidEnter() {
