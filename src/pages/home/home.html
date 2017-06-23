@@ -3,7 +3,8 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Amy's App</ion-title>
+    <ion-title>myPillow</ion-title>
+
   </ion-navbar>
 </ion-header>
 
@@ -13,38 +14,47 @@
       <button ion-button (click)="login()">Login</button>
   </div>
   <div *ngIf="particle.token && particle.device">
-      <h3>Particle.io Device App Boilerplate</h3>
+      <h2 class = "h2-div">myPillow helps you WAKE UP!</h2>
       <div>
-          <h5>Particle device status</h5>
-          <p>
-            You can display different device states by checking <code>particle.device</code>
-          </p>
-          <p *ngIf="!particle.device || !particle.device.connected">The device is offline</p>
-          <p *ngIf="particle.device && particle.device.connected">You are currently viewing {{particle.device.name}}</p>
+          <h4>Why myPillow?</h4>
+          <ul style = "list-style-type:square">
+            <li>myPillow is a pillow that vibrates at a time you set on the "myPillow" app. </li>
+            <li>myPillow aids those with hearing disabilities since the device utilizes vibrations instead of sound.</li>
+            <li>myPillow is also another option for people who don't like the classic sound alarms!
+            </li>
+          </ul>
+          <!--<p *ngIf="!particle.device || !particle.device.connected">The device is offline</p>
+          <p *ngIf="particle.device && particle.device.connected">You are currently viewing {{particle.device.name}}</p>-->
       </div>
       <div>
-          <h5>Device variables</h5>
-          <p>
-            You can subscribe to variables by calling <code>particle.pollVariable</code>.
-          </p>
-          <p>
+          <h5>How to Set Up?</h5>
+          <ol>
+            <li>Open up the "myPillow" app</li>
+            <li>Tap "Create Alarm"</li>
+            <li>Set desired alarm time and press the check-mark button</li>
+            <li>And you're done!</li>
+
+          </ol>
+          <!--<p>
             The device variable "var1" automatically polls, and the current value is {{var1}}
-          </p>
+          </p>-->
       </div>
       <div>
-          <h5>Custom components</h5>
+          <h5>About the Creator</h5>
           <p>
-            You can also create custom components. It's also more efficient to update components by subscribing to events 
-            from your device, by calling <code>particle.subscribe</code>
+            A random human being who participates in this TACC camp. She thought a vibrating pillow alarm was cool and thought about how she couldn't wake up to any sort of sound alarms. The idea began to flourish and soon "myPillow" was born. 
+            <!--You can also create custom components. It's also more efficient to update components by subscribing to events 
+            from your device, by calling <code>particle.subscribe</code>-->
           </p>
-          <particle-progress [event]="'variableUpdate'" [min]="2" [max]="10"></particle-progress>
+          <!--<particle-progress [event]="'variableUpdate'" [min]="2" [max]="10"></particle-progress>-->
       </div>
-      <div>
+      <!--<div>
         <h5>Calling functions</h5>
         <p>
             You can call device functions with <code>particle.callFunction</code>
         </p>
         <button ion-button (click)="particle.callFunction('fun1')">Call a function</button>
-      </div>
+      </div>-->
   </div>
 </ion-content>
+
