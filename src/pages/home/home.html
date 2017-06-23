@@ -9,6 +9,12 @@
 </ion-header>
 
 <ion-content padding> 
+
+  <style>
+        ion-content {
+          background-color: #C3CFDD;
+        }
+  </style>
   <div *ngIf="!particle.token">
       Please login and select a device. <br />
       <button ion-button (click)="login()">Login</button>
