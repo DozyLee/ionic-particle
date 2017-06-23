@@ -14,7 +14,7 @@
       <button ion-button (click)="login()">Login</button>
   </div>
   <div *ngIf="particle.token && particle.device">
-      <h2 class = "h2-div">myPillow helps you WAKE UP!</h2>
+      <h2 class = "h2-div">Welcome to myPillow!</h2>
       <div>
           <h4>Why myPillow?</h4>
           <ul style = "list-style-type:square">
@@ -27,7 +27,7 @@
           <p *ngIf="particle.device && particle.device.connected">You are currently viewing {{particle.device.name}}</p>-->
       </div>
       <div>
-          <h5>How to Set Up?</h5>
+          <h5>How to Set Up Alarms</h5>
           <ol>
             <li>Open up the "myPillow" app</li>
             <li>Tap "Create Alarm"</li>
